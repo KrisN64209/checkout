@@ -21,6 +21,7 @@ class Checkout
   end
   def give_total
     prices = @scanned_items.map{|item| item[:price]}.sum
+    return "£"+('%.2f' % prices).to_s
   end
 end
 
