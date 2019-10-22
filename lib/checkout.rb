@@ -12,7 +12,7 @@ class Checkout
     price_check = @items.find {
       |item| item[:name]== item_name
     }.values.to_a
-    return price_check[1]
+    return "£"+('%.2f' % price_check[1]).to_s
   end
   def scan(item_scanned)
     @scanned_items << @items.find {
@@ -23,3 +23,4 @@ class Checkout
     prices = @scanned_items.map{|item| item[:price]}.sum
   end
 end
+
