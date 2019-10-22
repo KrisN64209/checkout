@@ -14,6 +14,6 @@ describe Checkout do
     a_checkout = Checkout.new
     a_checkout.scan('Bread')
     a_checkout.scan('Milk')
-    expect(a_checkout.give_total).to eq 3.00
+    expect(a_checkout.give_total).to eq "£3.00"
   end
 end
