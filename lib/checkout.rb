@@ -24,4 +24,3 @@ class Checkout
     return "£"+('%.2f' % prices).to_s
   end
 end
-
