@@ -9,6 +9,14 @@ describe Checkout do
   it 'can scan an item' do
     a_checkout = Checkout.new
     a_checkout.scan('Bread')
-    expect(scanned_items.length).to eq 1
+    expect(a_checkout.scanned_items.length).to eq 1
   end
+
+  it 'can give a total for all items scanned' do
+    a_checkout = Checkout.new
+    a_checkout.scan('Bread')
+    a_checkout.scan('Milk')
+    expect(a_checkout.give_total).to eq 3.00
+  end
+
 end
