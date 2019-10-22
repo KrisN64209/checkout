@@ -23,4 +23,3 @@ class Checkout
     prices = @scanned_items.map{|item| item[:price]}.sum
   end
 end
-
